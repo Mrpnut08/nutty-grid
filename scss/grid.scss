@@ -1,0 +1,14 @@
+.grid {
+    
+    & > [class*='col-'] {
+        @include col(left);
+    }
+    
+    @for $n from 1 through $col_number {
+        & > .col-#{$base_tier}-#{$n} {
+            @include get_col_size($n);
+        }
+    } //~ @for $n from 1 through $col_number  
+    
+    
+} //~ .grid
