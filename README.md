@@ -1,2 +1,4 @@
-# nutty-grid
-A simple responsive grid system that is fucosed in providing mobile-first facilities while keeping styling at a minimum.
+# Nutty-Grid
+##The mobile-first grid micro-system.
+A simple responsive grid system that is focused in providing mobile-first 
+facilities while keeping CSS styling and HTML markup at a minimum.
