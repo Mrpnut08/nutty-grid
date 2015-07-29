@@ -2,7 +2,11 @@
 $col_number: 12;
 $gutter_size: 1.2%;
 
+
+$base_tier: phone;
+
 //Grid breakpoints
-$tablet: 448px;
-$laptop: 768px;
-$desktop: 1280px;
+$breakpoints: ( tablet: 448px,
+                laptop: 768px,
+                desktop: 1280px,
+);

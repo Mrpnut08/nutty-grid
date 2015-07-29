@@ -6,8 +6,23 @@
     
     float: $side;
     margin-#{$reverse}: $gutter_size;
+    
+    &:last-child {
+        margin-#{$reverse}: 0;
+    }
 }
 
+@mixin get_col_size($cn) {
+    @if $cn == $col_number {
+        width : 100%;
+    } @else {
+        $w: 100 - ($gutter_size * ($col_number - 1));
+        $w: $w / $col_number * $cn;
+        $w: $w + ($gutter_size * ($cn - 1));
+        
+        width: $w;
+    }
+}
 
 %col {
     @include col(left);
