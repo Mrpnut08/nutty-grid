@@ -1,0 +1,20 @@
+@import "config";
+
+@mixin col($side) {
+    
+    $reverse: none;
+    @if $side == left { $reverse: right; }
+    @else { $reverse: left; }
+    
+    float: $side;
+    margin-#{$reverse}: $gutter_size;
+}
+
+
+%col {
+    @include col(left);
+}
+
+%inv {
+    @include col(right);
+}
