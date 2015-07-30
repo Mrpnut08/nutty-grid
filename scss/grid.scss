@@ -1,8 +1,8 @@
-.grid {
+$regex_base: 'col-';
 
-    & > [class*='col-'] {
-        @include col(left);
-    }
+.grid {
+    
+    @include colRegex($base_tier, left);
 
     @for $n from 1 through $col_number {
         & > .col-#{$base_tier}-#{$n} {
@@ -12,6 +12,9 @@
 
     @each $type, $break in $breakpoints {
       @media (min-width: $break) {
+         
+         @include colRegex($type, left);
+         
          @for $n from 1 through $col_number {
             & > .col-#{$type}-#{$n} {
                   @include get_col_size($n);

@@ -12,6 +12,13 @@
     }
 }
 
+@mixin colRegex($tier, $side) {
+    $regex : '\'col-' + $tier + '\'';
+    & > [class*=#{$regex}] {
+        @include col($side);
+    }
+}
+
 @mixin get_col_size($cn) {
     @if $cn == $col_number {
         width : 100%;
@@ -22,12 +29,4 @@
         
         width: $w;
     }
-}
-
-%col {
-    @include col(left);
-}
-
-%inv {
-    @include col(right);
 }
