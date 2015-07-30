@@ -23,10 +23,15 @@
     @if $cn == $col_number {
         width : 100%;
     } @else {
-        $w: 100 - ($gutter_size * ($col_number - 1));
+        $w: 100% - ($gutter_size * ($col_number - 1));
         $w: $w / $col_number * $cn;
         $w: $w + ($gutter_size * ($cn - 1));
         
         width: $w;
     }
+}
+
+@mixin getOffsetSize($cn, $side) {
+    $m: 100% / $col_number * $cn;
+    margin-#{$side}: $m;
 }

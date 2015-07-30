@@ -10,6 +10,12 @@ $regex_base: 'col-';
         }
     } //~ @for $n from 1 through $col_number
 
+    @for $n from 1 to $col_number {
+        & > .offset-#{$base_tier}-#{$n} {
+            @include getOffsetSize($n, right);
+        }
+    }
+
     @each $type, $break in $breakpoints {
       @media (min-width: $break) {
          
@@ -18,6 +24,12 @@ $regex_base: 'col-';
          @for $n from 1 through $col_number {
             & > .col-#{$type}-#{$n} {
                   @include get_col_size($n);
+            }
+         }
+         
+         @for $n from 1 to $col_number {
+            & > .offset-#{$type}-#{$n} {
+                @include getOffsetSize($n, left);
             }
          }
       }
