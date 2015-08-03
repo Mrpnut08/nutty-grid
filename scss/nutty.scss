@@ -1,14 +1,21 @@
-@mixin col($side) {
-    
+@mixin reverseSpacing($side, $value){
     $reverse: none;
     @if $side == left { $reverse: right; }
     @else { $reverse: left; }
     
-    float: $side;
-    margin-#{$reverse}: $gutter_size;
+    #{$gutter-type}-#{$reverse}: #{$value};
+}
+
+/// Sets a column gutter and floating parameters according to $side.
+@mixin col($side) {
     
+    //Set the float and the gutter.
+    float: $side;
+    @include reverseSpacing($side, $gutter_size);
+    
+    //Do not add gutter if the column is the last one.
     &:last-child {
-        margin-#{$reverse}: 0;
+        @include reverseSpacing($side, 0);
     }
 }
 
@@ -16,6 +23,11 @@
     $regex : '\'col-' + $tier + '\'';
     & > [class*=#{$regex}] {
         @include col($side);
+        
+        & + .col-#{$tier}-#{'0'}:last-child,
+        & + .col-#{$tier}-hidden:last-child,{
+            @include reverseSpacing($side, 0);
+        }
     }
 }
 
