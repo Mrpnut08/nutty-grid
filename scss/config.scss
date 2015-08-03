@@ -1,11 +1,21 @@
-//Grid spacing.
-$col_number: 12;
-$gutter_size: 1.2%;
+//****************************************************************************
+// * User configuration file for nutty-grid.
+// * Holds the values that allow nutty-grid to be easily configurable when
+//   attempting to create a customized build.
+//****************************************************************************
 
+//------ General grid settings. ------//
+$col_number: 12;        // Number of columns the grid will have.
+$gutter_size: 1.2%;     // Size of the gutter between columns (must be in %)
 
-$base_tier: phone;
+$gutter_type: margin;   // Select if the gutter will be set using the margin or 
+                        // padding property. This value is experimental and may
+                        // leave you with a broken grid. Handle with care.
 
-//Grid breakpoints
+//------ Breakpoints and responsive configuration. ------//
+$base_tier: phone;            // Name of the base tier (smallest size possible)
+
+//Grid breakpoints structured in  'tier_name : break_width' manner.
 $breakpoints: ( tablet: 448px,
                 laptop: 768px,
                 desktop: 1280px,
