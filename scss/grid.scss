@@ -1,6 +1,11 @@
 $regex_base: 'col-';
 
+.clearfix {
+    @extend %clearfix;
+}
+
 .grid {
+    @extend %clearfix;
     
     @include colRegex($base_tier, left);
 
@@ -20,6 +25,11 @@ $regex_base: 'col-';
       @media (min-width: $break) {
          
          @include colRegex($type, left);
+         
+         & > .col-#{$type}-#{"0"},
+         & > .col-#{$type}-hidden {
+             display:none;
+         }
          
          @for $n from 1 through $col_number {
             & > .col-#{$type}-#{$n} {
