@@ -1,8 +1,16 @@
-.clearfix, 
+.clearfix {
+    @extend %clearfix;
+}
+
 .grid, 
 .grid-inverted {
     @extend %clearfix;
+
+    &, * {
+        box-sizing: border-box;;
+    }
 }
+
 
 @include generate_tier($base_tier);
 

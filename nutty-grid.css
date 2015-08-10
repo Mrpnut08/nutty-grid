@@ -1,20 +1,22 @@
-.clearfix,
-.grid,
+.clearfix, .grid,
 .grid-inverted {
   zoom: 1;
 }
-.clearfix:before,
-.grid:before,
-.grid-inverted:before, .clearfix:after,
-.grid:after,
+.clearfix:before, .grid:before,
+.grid-inverted:before, .clearfix:after, .grid:after,
 .grid-inverted:after {
   content: "";
   display: table;
 }
-.clearfix:after,
-.grid:after,
+.clearfix:after, .grid:after,
 .grid-inverted:after {
   clear: both;
+}
+
+.grid, .grid *,
+.grid-inverted,
+.grid-inverted * {
+  box-sizing: border-box;
 }
 
 .grid > [class*='.col-phone-'] {
@@ -26,7 +28,7 @@
 }
 
 .col-phone-0,
-.col-phone--hidden {
+.col-phone-hidden {
   display: none;
 }
 
@@ -184,7 +186,7 @@
   }
 
   .col-tablet-0,
-  .col-tablet--hidden {
+  .col-tablet-hidden {
     display: none;
   }
 
@@ -342,7 +344,7 @@
   }
 
   .col-laptop-0,
-  .col-laptop--hidden {
+  .col-laptop-hidden {
     display: none;
   }
 
@@ -500,7 +502,7 @@
   }
 
   .col-desktop-0,
-  .col-desktop--hidden {
+  .col-desktop-hidden {
     display: none;
   }
 
