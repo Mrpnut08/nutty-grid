@@ -6,11 +6,7 @@
 
 //------ General grid settings. ------//
 $col_number: 12;        // Number of columns the grid will have.
-$gutter_size: 1.2%;     // Size of the gutter between columns (must be in %)
 
-$gutter_type: margin;   // Select if the gutter will be set using the margin or 
-                        // padding property. This value is experimental and may
-                        // leave you with a broken grid. Handle with care.
 
 //------ Breakpoints and responsive configuration. ------//
 $base_tier: phone;            // Name of the base tier (smallest size possible)
