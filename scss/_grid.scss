@@ -1,0 +1,13 @@
+.clearfix, 
+.grid, 
+.grid-inverted {
+    @extend %clearfix;
+}
+
+@include generate_tier($base_tier);
+
+@each $tier_name, $break_size in $breakpoints {
+    @media (min-width: $break_size) {
+        @include generate_tier($tier_name);
+    }
+}
