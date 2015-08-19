@@ -14,8 +14,9 @@
 
 /// Makes all the rules for columns and offsets with the given $tier_name.
 @mixin generate_tier($tier_name) {
-    $col_class: ".col-" + $tier_name + "-";
-    $col_regex: "'" + $col_class + "'";
+    $col: "col-" + $tier_name + "-";
+    $col_class: "."+ $col;
+    $col_regex: "'" + $col + "'";
     
     $offset_class: ".offset-" + $tier_name + "-";
     

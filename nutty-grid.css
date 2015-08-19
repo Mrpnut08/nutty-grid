@@ -19,11 +19,11 @@
   box-sizing: border-box;
 }
 
-.grid > [class*='.col-phone-'] {
+.grid > [class*='col-phone-'] {
   float: left;
 }
 
-.grid-inverted > [class*='.col-phone-'] {
+.grid-inverted > [class*='col-phone-'] {
   float: right;
 }
 
@@ -177,11 +177,11 @@
 }
 
 @media (min-width: 448px) {
-  .grid > [class*='.col-tablet-'] {
+  .grid > [class*='col-tablet-'] {
     float: left;
   }
 
-  .grid-inverted > [class*='.col-tablet-'] {
+  .grid-inverted > [class*='col-tablet-'] {
     float: right;
   }
 
@@ -335,11 +335,11 @@
   }
 }
 @media (min-width: 768px) {
-  .grid > [class*='.col-laptop-'] {
+  .grid > [class*='col-laptop-'] {
     float: left;
   }
 
-  .grid-inverted > [class*='.col-laptop-'] {
+  .grid-inverted > [class*='col-laptop-'] {
     float: right;
   }
 
@@ -493,11 +493,11 @@
   }
 }
 @media (min-width: 1280px) {
-  .grid > [class*='.col-desktop-'] {
+  .grid > [class*='col-desktop-'] {
     float: left;
   }
 
-  .grid-inverted > [class*='.col-desktop-'] {
+  .grid-inverted > [class*='col-desktop-'] {
     float: right;
   }
 
@@ -650,5 +650,3 @@
     margin-right: 100%;
   }
 }
-
-/*# sourceMappingURL=nutty-grid.css.map */
