@@ -32,6 +32,14 @@
   display: none;
 }
 
+.grid > .offset-phone-0 {
+  margin-left: 0;
+}
+
+.grid-inverted > .offset-phone-0 {
+  margin-right: 0;
+}
+
 .col-phone-1 {
   width: 8.33333%;
 }
@@ -188,6 +196,14 @@
   .col-tablet-0,
   .col-tablet-hidden {
     display: none;
+  }
+
+  .grid > .offset-tablet-0 {
+    margin-left: 0;
+  }
+
+  .grid-inverted > .offset-tablet-0 {
+    margin-right: 0;
   }
 
   .col-tablet-1 {
@@ -348,6 +364,14 @@
     display: none;
   }
 
+  .grid > .offset-laptop-0 {
+    margin-left: 0;
+  }
+
+  .grid-inverted > .offset-laptop-0 {
+    margin-right: 0;
+  }
+
   .col-laptop-1 {
     width: 8.33333%;
   }
@@ -504,6 +528,14 @@
   .col-desktop-0,
   .col-desktop-hidden {
     display: none;
+  }
+
+  .grid > .offset-desktop-0 {
+    margin-left: 0;
+  }
+
+  .grid-inverted > .offset-desktop-0 {
+    margin-right: 0;
   }
 
   .col-desktop-1 {

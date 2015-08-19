@@ -33,6 +33,14 @@
         display: none;
     }
     
+    .grid > #{$offset_class}#{'0'} {
+        margin-left: 0;
+    }
+        
+    .grid-inverted > #{$offset_class}#{'0'} {
+        margin-right: 0;
+    }
+    
     // Do all the sizing calculations.
     @for $n from 1 through $col_number {
         $v: $n/$col_number * 100%;
