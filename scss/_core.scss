@@ -1,12 +1,12 @@
 /// ClearFix placeholder. Great for integrating Clearfix into custom classes.
 %clearfix {
     zoom:1;
-    
+
     &:before, &:after {
         content:"";
         display:table;
     }
-    
+
     &:after {
         clear:both;
     }
@@ -17,44 +17,48 @@
     $col: "col-" + $tier_name + "-";
     $col_class: "."+ $col;
     $col_regex: "'" + $col + "'";
-    
+
     $offset_class: ".offset-" + $tier_name + "-";
-    
-    .grid > [class*=#{$col_regex}] {
-        float:left;
+
+    [class*=#{$col_regex}] {
+        display:block;
+
+        .grid > & {
+           float:left;
+        }
     }
-    
+
     .grid-inverted > [class*=#{$col_regex}] {
         float:right;
     }
-    
+
     #{$col_class}#{'0'},
     #{$col_class}hidden {
         display: none;
     }
-    
+
     .grid > #{$offset_class}#{'0'} {
         margin-left: 0;
     }
-        
+
     .grid-inverted > #{$offset_class}#{'0'} {
         margin-right: 0;
     }
-    
+
     // Do all the sizing calculations.
     @for $n from 1 through $col_number {
         $v: $n/$col_number * 100%;
-    
+
         //Calculate column width.
         #{$col_class}#{$n} {
             width: $v;
         }
-        
+
         //calculate offset.
         .grid > #{$offset_class}#{$n} {
             margin-left: $v;
         }
-        
+
         //calculate offset for inverted grid.
         .grid-inverted > #{$offset_class}#{$n} {
             margin-right: $v;
